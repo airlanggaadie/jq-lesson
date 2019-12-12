@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .kotak1,
+        .kotak2,
+        .kotak3,
+        .kotak4 {
+            height: 100px;
+            width: 100px;
+            display: inline-block;
+            background-color: yellow;
+        }
+
+        .kotak1b,
+        .kotak2b,
+        .kotak3b,
+        .kotak4b {
+            height: 100px;
+            width: 100px;
+            display: inline-block;
+            background-color: burlywood;
+        }
+        .kotak1c,
+        .kotak2c,
+        .kotak3c,
+        .kotak4c {
+            /* position: absolute;
+            top: 0; */
+            height: 100px;
+            width: 100px;
+            display: inline-block;
+            background-color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <button class="show">Show</button>
+    <button class="hide">Hide</button>
+    <button class="tog">Toggle</button>
+    <br><br>
+    <div class="kotak1"></div>
+    <div class="kotak2"></div>
+    <div class="kotak3"></div>
+    <div class="kotak4"></div>
+    <br><br>
+    <button class="fo">Fade Out</button>
+    <button class="fi">Fade In</button>
+    <button class="ftog">Fade Toggle</button>
+    <button class="ft">Fade To</button>
+    <br><br>
+    <div class="kotak1b"></div>
+    <div class="kotak2b"></div>
+    <div class="kotak3b"></div>
+    <div class="kotak4b"></div>
+    <br><br>
+    <button class="su">Slide Up</button>
+    <button class="sd">Slide Down</button>
+    <button class="stog">Slide Toggle</button>
+    <br><br>
+    <div class="kotak1c"></div>
+    <div class="kotak2c"></div>
+    <div class="kotak3c"></div>
+    <div class="kotak4c"></div>
+    <script src="jquery-3.4.1.min.js"></script>
+
+    <script>
+        $(document).ready(function () {
+            $(".show").click(function () {
+                $(".kotak1").show(1000);
+                $(".kotak2").show(2000);
+                $(".kotak3").show(3000);
+                $(".kotak4").show(5000);
+            });
+            $(".hide").click(function () {
+                $(".kotak1").hide(1000);
+                $(".kotak2").hide(2000);
+                $(".kotak3").hide(3000);
+                $(".kotak4").hide(5000);
+            });
+            $(".tog").click(function () {
+                $(".kotak1").toggle(3000);
+                $(".kotak2").toggle("fast");
+                $(".kotak3").toggle(5000);
+                $(".kotak4").toggle("slow");
+            });
+            $(".fo").click(function () {
+                $(".kotak1b").fadeOut(3000);
+                $(".kotak2b").fadeOut("fast");
+                $(".kotak3b").fadeOut(5000);
+                $(".kotak4b").fadeOut("slow");
+            });
+            $(".fi").click(function () {
+                $(".kotak1b").fadeIn(3000);
+                $(".kotak2b").fadeIn("fast");
+                $(".kotak3b").fadeIn(5000);
+                $(".kotak4b").fadeIn("slow");
+            });
+            $(".ftog").click(function () {
+                $(".kotak1b").fadeToggle(1000);
+                $(".kotak2b").fadeToggle(2000);
+                $(".kotak3b").fadeToggle(3000);
+                $(".kotak4b").fadeToggle(5000);
+            });
+            $(".ft").click(function () {
+                $(".kotak1b").fadeTo(5000, .25);
+                $(".kotak2b").fadeTo("fast", .4);
+                $(".kotak3b").fadeTo(3000, .7);
+                $(".kotak4b").fadeTo("slow", .9);
+            });
+            $(".su").click(function () {
+                $(".kotak1c").slideUp("slow");
+                $(".kotak2c").slideUp("fast");
+                $(".kotak3c").slideUp(3000);
+                $(".kotak4c").slideUp(5000);
+            });
+            $(".sd").click(function () {
+                $(".kotak1c").slideDown("slow");
+                $(".kotak2c").slideDown("fast");
+                $(".kotak3c").slideDown(3000);
+                $(".kotak4c").slideDown(5000);
+            });
+            $(".stog").click(function () {
+                $(".kotak1c").slideToggle(5000);
+                $(".kotak2c").slideToggle(3000);
+                $(".kotak3c").slideToggle(2000);
+                $(".kotak4c").slideToggle(1000);
+            });
+        });
+    </script>
+</body>
+
+</html>
